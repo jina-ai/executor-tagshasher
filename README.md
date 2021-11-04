@@ -6,7 +6,7 @@ Note that, unlike `FeatureHashser`, you should only use Jaccard/Hamming distance
 
 Hence, in `TagsHasher` only identity value in the embedded vector matters.
 
-This demo requires `jina>=2.2.5.dev4`, if you encounter error try latest master.
+This demo requires `jina>=2.2.5.dev6`, if you encounter error then try latest Jina master.
 
 ## Example
 
@@ -15,8 +15,7 @@ I will keep everything out of the Flow to make it clear:
 ```python
 import io
 
-from executor import TagsHasher
-from jina import Document, DocumentArray
+from jina import Document, DocumentArray, Executor
 from jina.types.document.generators import from_csv
 
 # Load some online CSV file dataset
@@ -26,7 +25,7 @@ src = Document(
 da = DocumentArray(from_csv(io.StringIO(src.text), dialect='auto'))
 
 # use TagsHasher to encode data
-th = TagsHasher()
+th = Executor.from_hub('jinahub://TagsHasher')
 th.encode(da)
 
 # build some filters
@@ -53,6 +52,7 @@ for d in qa:
     input()
 ```
 
+---
 
 ```text
 my filter is: {
