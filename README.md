@@ -6,7 +6,7 @@ Note that, unlike `FeatureHashser`, you should only use Jaccard/Hamming distance
 
 Hence, in `TagsHasher` only identity value in the embedded vector matters.
 
-This demo requires `jina>=2.2.5.dev6`, if you encounter error then try latest Jina master.
+This demo requires `jina>=2.2.5`, if you encounter error then try latest Jina master.
 
 ## Example
 
