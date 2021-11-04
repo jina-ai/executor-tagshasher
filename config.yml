@@ -1,0 +1,4 @@
+jtype: TagsHasher
+metas:
+  py_modules:
+    - executor.py

@@ -1,0 +1,5 @@
+manifest_version: 1
+name: TagsHasher
+description: Inspired by the idea of FeatureHasher, TagsHasher converts arbitrary `.tags` into a fixed-length vector.
+url: https://github.com/jina-ai/executor-tagshasher
+keywords: ['tabular data', ' feature hashing', ' hashing', ' hashing trick']
